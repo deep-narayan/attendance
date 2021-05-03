@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+
+{% block b%}
+<br>
+<br>
+<h2 align="center">Sign-up</h2>
+<div class="container">
+<div style="margin-top: 50px; margin-bottom: 50px;">
+				
+				<form method="post">
+					{% csrf_token %}
+				  <div class="form-group">
+    			<label for="exampleInputEmail1">Name</label>
+    			<div >
+    			<input type="text"   name="nm1" placeholder="Firstname" class="form-control">
+    			<br>
+    			<input type="text"  name="nm2" placeholder="Lastname"class="form-control" >
+    		    </div>
+  				</div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Gender</label>
+          <select class="form-control" name="gender">
+                  <option value="none">Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+              </select>
+        </div>
+  				<div class="form-group">
+    			<label for="exampleInputEmail1">Email</label>
+    			<input type="text" class="form-control"  name="email">
+  				</div>
+  				<div class="form-group">
+    			<label for="exampleInputEmail1">Username</label>
+    			<input type="text" class="form-control"  name="username">
+  				</div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Password</label>
+          <input type="password" class="form-control"  name="pwd">
+          </div>
+          <div class="form-group">
+          <label for="exampleInputEmail1">Register as</label>
+          <select class="form-control" name="usertype">
+                  <option value="none">Select</option>
+                  <option value="student">Student</option>
+                  <option value="teacher">Teacher</option>
+              </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Roll No</label>
+          <input type="textarea" class="form-control"  name="rollno" placeholder="Only For Students">
+          </div>
+
+          <div class="form-group">
+          <label for="exampleInputEmail1">Address</label>
+          <input type="textarea" class="form-control"  name="add">
+          </div>
+  				<div class="form-group">
+    			<label for="exampleInputPassword1">Age</label>
+    			<input type="text" class="form-control" id="exampleInputPassword1" name="age">
+  				</div>
+				<input type="submit" name="Submit">
+				</form>	
+		</div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'dashboard.html' %}
+{% block c %}
+	
+<div class="container" style="margin-top:50px;">
+	<br>
+	<h1 align="center">Add Subject</h1>
+	<br>
+	<form method="post">
+	{% csrf_token %}
+	<input type="text" name="subject">
+	<br>
+	<br>
+	<input type="submit" value="Submit" class="btn btn-primary">
+
+	</form>
+	
+
+	
+</div>
+
+{% endblock %}
+{% block roll %}
+{% endblock %}

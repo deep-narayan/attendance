@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block b%}
+
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-dark">
+  <span class="navbar-brand mb-0 h1"><h3>Hello {{ name }}</h3></span>
+  <div style="width:50%;"></div>
+  <a href="/logout/"><button type="button" class="btn btn-primary">Logout</button></a>
+</nav>
+{% block c %}
+
+
+{% endblock %}
+{% block roll %}
+<div class="container" style="margin:150px;border:1px solid black">
+	<h2>Check Your Result here</h2>
+	<br>
+	<br>
+	<form method="post">
+		{% csrf_token %}
+		<input type="text" name="rollno">
+		<input type="submit" name="submit" value="Check Result">
+	</form>
+	<br>
+</div>
+{% endblock %}
+{% endblock %}
